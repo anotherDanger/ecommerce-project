@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         customNavbarColor: '#9AA6B2',
         customBannerColor: '#BCCCDC'
+      },
+      transitionDuration: {
+        '5000': '5000ms'
       }
     },
   },

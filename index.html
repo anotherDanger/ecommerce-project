@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./output.css">
+    <title>Halaman Utama</title>
+</head>
+<body>
+    <nav class="bg-customNavbarColor text-cyan-50">
+        <div class="container mx-auto px-4 flex justify-between items-center h-16">
+          <!-- Links -->
+          <div class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-cyan-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Home</a>
+            <a href="#" class="hover:text-cyan-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Contact</a>
+            <a href="#" class="hover:text-cyan-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">About</a>
+          </div>
+
+          <button id="profilBtn" class="hover:text-cyan-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" onclick="toggleSidebar()">Profil</button>
+
+
+        </div>
+    </nav>
+
+    <div id="sidebar" class="fixed inset-y-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="w-96 h-full bg-customNavbarColor text-white p-6">
+            <h2 class="text-xl font-bold mb-4">Profil</h2>
+
+            <button onclick="toggleSidebar()" class="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 ">Close</button>
+        </div>
+    </div>
+
+    
+
+    <script>
+        function toggleSidebar()
+        {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('translate-x-0');
+            sidebar.classList.toggle('translate-x-2');
+        }
+    </script>
+</body>
+</html>

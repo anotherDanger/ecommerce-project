@@ -13,21 +13,31 @@
             <div class="flex items-center space-x-6">
                 <!-- Logo -->
                 <div class="text-lg font-bold flex-shrink-0">Brand</div>
-
+        
                 <!-- Menu -->
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:text-slate-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-200 text-sm md:text-base">Home</a>
-                    <a href="#" class="hover:text-slate-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-200 text-sm md:text-base">Contact</a>
-                    <a href="#" class="hover:text-slate-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-200 text-sm md:text-base">About</a>
+                    <a href="#" class="hover:text-slate-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200 text-sm md:text-base">Home</a>
+                    <a href="#" class="hover:text-slate-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200 text-sm md:text-base">Contact</a>
+                    <a href="#" class="hover:text-slate-900 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200 text-sm md:text-base">About</a>
                 </div>
             </div>
-
-            <!-- Profil Button -->
-            <button id="profilBtn" class="hover:text-slate-900 transition text-sm md:text-base ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-200" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-              </svg>
-              </button>
+        
+            <!-- Profil dan Cart Buttons -->
+            <div class="flex items-center space-x-4 ml-auto">
+                <button id="profilBtn" class="hover:text-slate-900 transition text-sm md:text-base ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                </button>
+        
+                <button id="cartBtn" class="hover:text-slate-900 transition text-sm md:text-base ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                </button>
+            </div>
         </div>
+        
     </nav>
 
     <!-- Sidebar -->
@@ -38,27 +48,32 @@
         </div>
     </div>
 
-    <div class="container mx-auto my-4">
+    <div class="container mx-auto my-4 px-4 sm:px-6 md:px-0">
         <div class="bg-slate-300 rounded-xl mx-auto pb-52">
-            <h1 class="text-8xl pt-7 font-extralight">Beyond.</h1>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl pt-7 font-extralight">Beyond.</h1>
         </div>
     </div>
-
     <div class="container mx-auto my-4">
-            <div class="flex justify-center gap-28 p-4">
-                <div class="w-32 h-32 bg-slate-300 my-2 p-4 m-4 rounded-xl shadow-lg">
-                    <p class="text-center text-slate-800">Box</p>
-                </div>
-
-                <div class="w-32 h-32 bg-slate-300 my-2 p-4 m-4 rounded-xl shadow-lg">
-                    <p class="text-center text-slate-800">Box</p>
-                </div>
-
-                <div class="w-32 h-32 bg-slate-300 my-2 p-4 m-4 rounded-xl shadow-lg">
-                    <p class="text-center text-slate-800">Box</p>
-                </div>
+        <div class="flex justify-center gap-4 sm:gap-16 md:gap-56 p-4">
+            <!-- Box 1 -->
+            <div class="w-32 h-32 bg-slate-300 my-2 p-4 m-4 rounded-xl shadow-lg">
+                <p class="text-center text-slate-800">Box</p>
+                <img src="https://www.svgrepo.com/show/529258/t-shirt.svg" class="w-12 h-12">
             </div>
+    
+            <!-- Box 2 -->
+            <div class="w-32 h-32 bg-slate-300 my-2 p-4 m-4 rounded-xl shadow-lg">
+                <p class="text-center text-slate-800">Box</p>
+            </div>
+    
+            <!-- Box 3 -->
+            <div class="w-32 h-32 bg-slate-300 my-2 p-4 m-4 rounded-xl shadow-lg">
+                <p class="text-center text-slate-800">Box</p>
+            </div>
+        </div>
     </div>
+    
+    
     
 
     <script>
@@ -66,6 +81,22 @@
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('translate-x-full');
         }
+
+        const profil = document.getElementById('profilBtn');
+        profil.addEventListener('click', () => {
+            const sidebar = document.getElementById('sidebar');
+            const text = sidebar.querySelector('h2')
+            text.textContent = 'Profil';
+            toggleSidebar();
+        })
+
+        const cart = document.getElementById('cartBtn');
+        cart.addEventListener('click', () => {
+            const sidebar = document.getElementById('sidebar');
+            const text = sidebar.querySelector('h2')
+            text.textContent = 'Cart';
+            toggleSidebar();
+        })
     </script>
 </body>
 </html>

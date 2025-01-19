@@ -41,33 +41,42 @@
     </nav>
 
     <!-- Sidebar -->
-    <div id="sidebar" class="fixed inset-y-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out bg-gray-800 text-white w-64">
+    <div id="sidebar" class="fixed inset-y-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out bg-gray-400 text-white w-72">
         <div class="p-6">
             <h2 class="text-xl font-bold mb-4">Profil</h2>
-            <button onclick="toggleSidebar()" class="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">Close</button>
+            <button id="closeBtn" class="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">Close</button>
         </div>
     </div>
     <div class="container mx-auto my-4 px-4 sm:px-6 md:px-0">
         <div class="bg-slate-300 rounded-xl mx-auto pb-52">
-            <h1 class="text-4xl sm:text-6xl md:text-8xl pt-7 font-extralight text-center">Beyond.</h1>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl pt-7 font-extralight">Beyond.</h1>
         </div>
     </div>
     
-    <div class="container mx-auto my-4 px-0 sm:px-6 md:px-0">
-        <div class="flex justify-center gap-2 sm:gap-4 md:gap-8 p-2 sm:p-4">
+    
+
+    <div class="container mx-auto my-4 px-0 sm:px-6 md:px-0 ">
+        <div class="text-4xl ml-6 pt-6">
+            <h1>Category</h1>
+        </div>
+        <div class="flex justify-center gap-2 sm:gap-20 md:gap-40 p-2 sm:p-4">
             <!-- Box 1 -->
-            <div class="w-full sm:w-32 md:w-32 h-32 bg-slate-300 my-2 p-4 rounded-xl shadow-lg">
-                <p class="text-center text-slate-800">Box</p>
+            <div class="hover:scale-110 duration-200 w-full sm:w-32 md:w-32 h-32 bg-slate-100 my-2 p-4 rounded-xl shadow-lg">
+                
+                <img class="w-20 mx-auto my-auto" src="https://www.svgrepo.com/show/425552/online-shop-ecommerce-commerce.svg" alt="">
+                <p class="text-center text-slate-800 mt-1">Fashion</p>
             </div>
         
             <!-- Box 2 -->
-            <div class="w-full sm:w-32 md:w-32 h-32 bg-slate-300 my-2 p-4 rounded-xl shadow-lg">
-                <p class="text-center text-slate-800">Box</p>
+            <div class="hover:scale-110 duration-200 w-full sm:w-32 md:w-32 h-32 bg-slate-100 my-2 p-4 rounded-xl shadow-lg">
+                <img class="w-20 mx-auto my-auto" src="https://www.svgrepo.com/show/424466/discount-flash-sale.svg" alt="">
+                <p class="text-center text-slate-800">Flash Sale</p>
             </div>
         
             <!-- Box 3 -->
-            <div class="w-full sm:w-32 md:w-32 h-32 bg-slate-300 my-2 p-4 rounded-xl shadow-lg">
-                <p class="text-center text-slate-800">Box</p>
+            <div class="hover:scale-110 duration-200 w-full sm:w-32 md:w-32 h-32 bg-slate-100 my-2 p-4 rounded-xl shadow-lg">
+                <img class="w-20 mx-auto my-auto" src="https://www.svgrepo.com/show/425564/discount-ticket-coupon-ticket-voucher.svg" alt="">
+                <p class="text-center text-slate-800">Vouchers</p>
             </div>
         </div>
     </div>
@@ -82,27 +91,22 @@
     
     
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('translate-x-full');
-        }
+    <script type="Module">
+        import { homeNavigation } from "./scripts/home.js";
+        const navigation = new homeNavigation();
 
-        const profil = document.getElementById('profilBtn');
-        profil.addEventListener('click', () => {
-            const sidebar = document.getElementById('sidebar');
-            const text = sidebar.querySelector('h2')
-            text.textContent = 'Profil';
-            toggleSidebar();
+        document.getElementById('profilBtn').addEventListener('click', () => {
+            navigation.getProfilBtn();
+        });
+
+        document.getElementById('cartBtn').addEventListener('click', () => {
+            navigation.getCartBtn();
         })
 
-        const cart = document.getElementById('cartBtn');
-        cart.addEventListener('click', () => {
-            const sidebar = document.getElementById('sidebar');
-            const text = sidebar.querySelector('h2')
-            text.textContent = 'Cart';
-            toggleSidebar();
-        })
+        document.getElementById('closeBtn').addEventListener('click', () => {
+            navigation.toggleSidebar();
+        });
+
     </script>
 </body>
 </html>

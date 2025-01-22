@@ -72,19 +72,13 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
+    <div id="product-container"></div>
+
+    
     <script type="Module">
         import { homeNavigation } from "./scripts/home.js";
+        import { getProduct } from "./scripts/product.js";
         const navigation = new homeNavigation();
 
         document.getElementById('profilBtn').addEventListener('click', () => {
@@ -98,6 +92,8 @@
         document.getElementById('closeBtn').addEventListener('click', () => {
             navigation.toggleSidebar();
         });
+
+        getProduct();
 
     </script>
 </body>
